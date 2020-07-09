@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="ShapeSuite" annotations="JDK">
+	<test name="Shape Test">
+		<groups>
+			<run>
+				<include name="perimeter" />
+				<include name="area" />
+				<include name="volume" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.kavinschool.shape.CubeMultipleDataProviderTest" />
+		</classes>
+	</test>
+</suite> 

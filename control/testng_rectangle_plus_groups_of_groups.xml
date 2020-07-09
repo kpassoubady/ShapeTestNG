@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="ShapeSuite" annotations="JDK">
+	<test name="Shape Test">
+		<groups>
+			<define name="getters-setters">
+				<include name="Getter" />
+				<include name="Setter" />
+			</define>
+			<run>
+				<include name="getters-setters" />
+				<exclude name="print"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.kavinschool.shape.RectanglePlusGroupsOfGroupsTest" />
+		</classes>
+	</test>
+</suite> 
