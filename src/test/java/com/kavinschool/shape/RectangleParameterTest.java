@@ -1,12 +1,16 @@
 package com.kavinschool.shape;
 
-import org.testng.annotations.*;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 /**
  *
  * @author Kangeyan Passoubady (Kangs) -
- *         <a href="http://www.kavinschool.com/">Kavin School </a>
+ * <a href="http://www.kavinschool.com/">Kavin School </a>
  *
  */
 public class RectangleParameterTest {
@@ -32,9 +36,8 @@ public class RectangleParameterTest {
 	 */
 	@Parameters({ "RectanglePerimeterExpResult" })
 	@Test(groups = { "functional", "perimeter" })
-	public void testPerimeter(double p_expResult) {
-		System.out.println("testPerimeter parameter:" + p_expResult);
-		double expResult = p_expResult;
+	public void testPerimeter(double expResult) {
+		System.out.println("testPerimeter parameter:" + expResult);
 		double result = rectangle.perimeter();
 		assertEquals(expResult, result, 0.0);
 	}
@@ -44,9 +47,8 @@ public class RectangleParameterTest {
 	 */
 	@Parameters({ "RectangleAreaExpResult" })
 	@Test(groups = { "functional", "area" })
-	public void testArea(double p_expResult) {
-		System.out.println("testArea paramter:" + p_expResult);
-		double expResult = p_expResult;
+	public void testArea(double expResult) {
+		System.out.println("testArea parameter:" + expResult);
 		double result = rectangle.area();
 		assertEquals(expResult, result, 0.0);
 	}

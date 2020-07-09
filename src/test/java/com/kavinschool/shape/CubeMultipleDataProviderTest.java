@@ -1,7 +1,9 @@
 package com.kavinschool.shape;
 
-import org.testng.annotations.*;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 /**
  *
@@ -60,7 +62,7 @@ public class CubeMultipleDataProviderTest {
 	/**
 	 * Test of perimeter method, of class Cube.
 	 */
-	@Test(groups = { "data", "perimeter", "functional" }, dataProvider = "cube-perimeter")
+	@Test(groups = { "data", "perimeter", "functional" }, dataProvider = "cube-perimeter", invocationTimeOut = 30)
 	public void testPerimeter(int input, double PerimeterExpected) {
 		System.out.print("testPerimeter");
 		System.out.println(" passed values are side=" + input + " PerimeterExpected=" + PerimeterExpected);
@@ -69,5 +71,6 @@ public class CubeMultipleDataProviderTest {
 		double result = cube.perimeter();
 		System.out.println("testPerimeter result :" + result + " Expected: " + PerimeterExpected);
 		assertEquals(PerimeterExpected, result, 0.0);
+
 	}
 }
