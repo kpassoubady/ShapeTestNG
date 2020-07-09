@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="ShapeSuite" annotations="JDK">
+    <parameter name="RectanglePerimeterExpResult" value="22.0" />
+    <parameter name="RectangleAreaExpResult" value="28.0" />
+    <parameter name="RectangleLength" value="4" />
+    <parameter name="RectangleBreadth" value="7" />
+    <test name="Shape Test">
+        <groups>
+            <run>
+                <include name="perimeter"/>
+                <include name="area"/>
+            </run>
+        </groups>
+        <classes>
+              <class name="com.kavinschool.shape.RectangleParameterTest"/>
+        </classes>
+    </test>
+</suite> 
