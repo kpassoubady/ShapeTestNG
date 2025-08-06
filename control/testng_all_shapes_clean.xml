@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Shapes Test Suite (Clean)" parallel="false">
+  <!-- Original shapes -->
+  <test name="Square Tests">
+    <classes>
+      <class name="com.kavinschool.shape.SquareSimpleTest"/>
+      <class name="com.kavinschool.shape.SquareGroupTest"/>
+    </classes>
+  </test>
+  <test name="Rectangle Tests">
+    <parameter name="RectanglePerimeterExpResult" value="22.0" />
+    <parameter name="RectangleAreaExpResult" value="28.0" />
+    <parameter name="RectangleLength" value="4" />
+    <parameter name="RectangleBreadth" value="7" />
+    <classes>
+      <class name="com.kavinschool.shape.RectangleParameterTest"/>
+      <!-- Exclude the failing test class -->
+      <!-- <class name="com.kavinschool.shape.RectanglePlusGroupsOfGroupsTest"/> -->
+    </classes>
+  </test>
+  <test name="Circle Tests">
+    <classes>
+      <class name="com.kavinschool.shape.CircleExpectedExceptionsTest"/>
+    </classes>
+  </test>
+  <test name="Cube Tests">
+    <classes>
+      <class name="com.kavinschool.shape.CubeSingleDataProviderTest"/>
+      <class name="com.kavinschool.shape.CubeMultipleDataProviderTest"/>
+    </classes>
+  </test>
+  
+  <!-- New shapes -->
+  <test name="Triangle Tests">
+    <classes>
+      <class name="com.kavinschool.shape.TriangleSimpleTest"/>
+      <class name="com.kavinschool.shape.TriangleDataProviderTest"/>
+    </classes>
+  </test>
+  <test name="Cylinder Tests">
+    <classes>
+      <class name="com.kavinschool.shape.CylinderSimpleTest"/>
+      <class name="com.kavinschool.shape.CylinderDataProviderTest"/>
+    </classes>
+  </test>
+</suite>

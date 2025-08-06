@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Triangle Test Suite" parallel="false">
+  <test name="Triangle Tests">
+    <classes>
+      <class name="com.kavinschool.shape.TriangleSimpleTest"/>
+    </classes>
+  </test>
+</suite>
